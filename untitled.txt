@@ -1,0 +1,4 @@
+
+tensorflowjs_converter --input_format keras C:/Users/deves/Desktop/github_folder/BrainTumorDetection/check_model.h5 C:/Users/deves/Desktop/github_folder/BrainTumorDetection/json
+
+C:\Users\deves\Desktop\github_folder\BrainTumorDetection
