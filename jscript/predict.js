@@ -232,17 +232,13 @@ $("#predict-button").click(async function () {
 	
 	// reshape the input image tensor
 	//input_img_tensor = tensor.reshape([128,128,3]);
-	let example1 = tf.tensor4d([[ 
-		[[1, 3], [2, 8]], 
-		[[3, 9], [4, 2]] 
-	]]); 
-	
+
 	// append the tensor to the input image to create a 4th alpha channel --> shape [128,128,4]
-	rgba_tensor = tf.concat([orig_image, example1], axis=-1);
+	//rgba_tensor = tf.concat([orig_image, example1], axis=-1);
 	
 	
 	// resize all images. rgb_tensor is the segmented image.
-	rgba_tensor = rgba_tensor.resizeNearestNeighbor([250, 250]);
+	//rgba_tensor = rgba_tensor.resizeNearestNeighbor([250, 250]);
 	orig_image = orig_image.resizeNearestNeighbor([250, 250]);
 	color_image = color_image.resizeNearestNeighbor([250, 250]);
 	
@@ -261,7 +257,7 @@ $("#predict-button").click(async function () {
 	
 	// Write all images to 3 seperate canvas elements
 	// They will be displayed one on top of another.
-	tf.browser.toPixels(rgba_tensor, canvas2);
+	//tf.browser.toPixels(rgba_tensor, canvas2);
 	tf.browser.toPixels(orig_image, canvas3);
 	tf.browser.toPixels(color_image, canvas4);
 	
