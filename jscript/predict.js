@@ -98,7 +98,7 @@ let model;
 (async function () {
 	
 	model = await tf.loadLayersModel('brainmodel/model.json');
-	$("#selected-image").attr("src", "assets/Y90.jpg");
+	$("#selected-image").attr("src", "assets/Y60.jpg");
 	
 	
 	// Hide the model loading spinner
